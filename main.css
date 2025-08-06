@@ -1,66 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #80deea;
-  font-family: sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #f0f2f5;
+  color: #333;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 main {
-  background-color: #fff;
+  background-color: #ffffff;
   width: 100%;
+  max-width: 500px;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 720px) {
-  main {
-    padding: 30px;
-    width: 70%;
-  }
-}
-
-@media (min-width: 1000px) {
-  main {
-    width: 50%;
-  }
-}
-
-main form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+main h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #1c1c1c;
 }
 
 main form .row {
   width: 100%;
-}
-
-@media (min-width: 570px) {
-  main form .row {
-    width: 90%;
-  }
-}
-
-main form img#loading {
+  margin-bottom: 15px;
   position: relative;
-  top: 14px;
 }
 
 main form input {
-  box-sizing: border-box;
-  margin: 10px 0 10px 15%;
-  padding: 10px;
-  width: 70%;
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
   outline: none;
+  transition: border-color 0.2s;
 }
 
-main form.loading div:nth-child(n+3) input {
+main form input:focus {
+  border-color: #007bff;
+}
+
+main form.loading input {
   background-color: #f9f9f9;
 }
 
-main form .row .cep {
-  display: flex;
-  align-items: center;
+main form img#loading {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+main form #cepError {
+  color: #d93025;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .hidden {
@@ -68,13 +76,5 @@ main form .row .cep {
 }
 
 .input-cep-error {
-  border: 1px solid #f00;
-  background: rgba(255, 0, 0, .1);
-}
-
-main form #cepError {
-  color: rgba(255, 0, 0, 0.68);
-  margin-top: -5px;
-  margin: 10px 0 10px 15%;
-  width: 70%;
+  border-color: #d93025 !important;
 }

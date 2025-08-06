@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/master.css">
+  <title>Consulta de Endereço</title>
+  <link rel="stylesheet" href="/main.css">
 </head>
 <body>
   <main>
     <form action="">
       <h2>Address</h2>
       <div class="row">
-        <input type="text" id="cep" placeholder="CEP" autofocus><!-- 58015-435 -->
+        <input type="text" id="cep" placeholder="CEP" autofocus>
         <img src="imgs/spinner.svg" alt="loading" class="hidden" id="loading">
         <div id="cepError" class="hidden">
-          O CEP informado é invalido.
+          O CEP informado é inválido ou não foi encontrado.
         </div>
       </div>
       <div class="row">
@@ -28,12 +27,11 @@
         <input type="text" id="neighborhood" placeholder="Bairro">
       </div>
       <div class="row">
-        <input type="text" id="state" placeholder="Estado">
-      </div>
-      <div class="row">
         <input type="text" id="city" placeholder="Cidade">
       </div>
-      <!-- <input type="submit" value="Cadastrar"> -->
+      <div class="row">
+        <input type="text" id="state" placeholder="Estado">
+      </div>
     </form>
   </main>
   <script src="/Req_assíncrona.js"></script>
